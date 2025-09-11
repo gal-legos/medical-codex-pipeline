@@ -12,3 +12,4 @@ scipy as sp
 matplotlib.pyplot as plt
 sqlalchemy as sa        
 requests as req
+python3 -m pip show pandas
