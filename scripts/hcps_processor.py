@@ -2,7 +2,7 @@
 import pandas as pd
 
 # Read the fixed-width file (adjust colspecs as needed)
-colspecs = [(3, 13), (13, 93)]  # Example: code in 3:13, description in 13:93
+colspecs = [(3, 13), (13, 93)]  
 hcps_data = pd.read_fwf('input/HCPC2025_OCT_ANWEB_v3.txt',
                          colspecs=colspecs, header=None,
                            names=['code', 'description'])
@@ -11,7 +11,7 @@ hcps_data = pd.read_fwf('input/HCPC2025_OCT_ANWEB_v3.txt',
 hcps_data['code'] = hcps_data['code'].str.strip()
 hcps_data['description'] = hcps_data['description'].str.strip()
 
-# Remove duplicates
+# Removing duplicates
 hcps_data = hcps_data.drop_duplicates(subset=['code', 'description'])
 
 # Add last_updated column
