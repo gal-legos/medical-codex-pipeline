@@ -1,6 +1,7 @@
 
 
 # Raw data files (exclude from repo)
+*.txt
 input/
 *.xml
 *.zip
