@@ -1,0 +1,14 @@
+polars
+pandas
+requests
+scipy
+numpy
+matplotlib
+sqlalchemy
+pandas as pd 
+numpy as np
+polars as pl
+scipy as sp
+matplotlib.pyplot as plt
+sqlalchemy as sa        
+requests as req
