@@ -1,11 +1,24 @@
+
 import pandas as pd
-import logging
-from pathlib import Path
-from utils.common_functions import validate_code_format, save_to_formats 
 
-## file path 
+# Read the fixed-width file (adjust colspecs as needed)
+colspecs = [(3, 13), (13, 93)]  # Example: code in 3:13, description in 13:93
+hcps_data = pd.read_fwf('input/HCPC2025_OCT_ANWEB_v3.txt',
+                         colspecs=colspecs, header=None,
+                           names=['code', 'description'])
 
-## path to reading data file 
-hcps_data = pd.read_csv('input/HCPC2025_OCT_ANWEB_v3.txt')
+# Remove leading/trailing spaces
+hcps_data['code'] = hcps_data['code'].str.strip()
+hcps_data['description'] = hcps_data['description'].str.strip()
 
-input/HCPC2025_OCT_ANWEB_v3.txt
+# Remove duplicates
+hcps_data = hcps_data.drop_duplicates(subset=['code', 'description'])
+
+# Add last_updated column
+hcps_data['last_updated'] = '2025-09-01'
+
+# Save to CSV
+hcps_data.to_csv('output/hcps_cleaned.csv', index=False)
+
+print('Saved cleaned HCPCS data to output/hcps_cleaned.csv')
+
