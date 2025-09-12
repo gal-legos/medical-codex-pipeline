@@ -10,6 +10,14 @@ raw_downloads/
 # Processed files are OK to commit
 # output/ - keep these
 
+# datasets too big for github (including sct2_description_full bc apparently i pushed it previoulsy)
+output/snomed_ct_cleaned.csv
+output/sct2_Description_Full.csv           
+                                                
+
+
+
+
 # Python
 __pycache__/
 *.pyc

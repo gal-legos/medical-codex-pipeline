@@ -31,10 +31,4 @@ output_path = output_dir / 'RXNATOMARCHIVE.csv'
 
 df.write_csv(output_path)
 
-print(f"Successfully parsed {len(df)} records from RXNATOMARCHIVE.RRF")
-print(f"Saved to {output_path}")
-print(f"Dataset shape: {df.shape}")
-print(f"\nFirst 5 rows:")
-print(df.head())
-print(f"\nMemory usage (MB): {df.estimated_size() / 1024**2:.2f}")
 
