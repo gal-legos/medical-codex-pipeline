@@ -12,7 +12,9 @@ raw_downloads/
 
 # datasets too big for github (including sct2_description_full bc apparently i pushed it previoulsy)
 output/snomed_ct_cleaned.csv
-output/sct2_Description_Full.csv           
+output/sct2_Description_Full.csv      
+output/npi_small.csv
+     
                                                 
 
 
