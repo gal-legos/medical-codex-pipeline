@@ -49,7 +49,6 @@ df = df.with_columns(pl.lit('2025-09-01').alias('last_updated'))
 df = df.rename({'id': 'code', 'term': 'description', 
                 'last_updated': 'last_updated'})
 
-df = df.unique(subset=['code', 'description'])
 
 df = df.select(['code', 'description', 'last_updated'])
 
