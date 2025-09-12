@@ -1,4 +1,4 @@
-This is assignment 1. 
+# This is assignment 1. 
 
 The first step was to create the medical codex outline and create the necessary folders and files needed to begin the assignment. This meant creating the 'input' folder where all the original uncleaned data files would live; an 'output' folder for all of the cleaned .csv files; a 'scripts' folder which contained all seven of the python files relevant to the their respective medical codexes; the '.gitignore' file which contains the information of what files can be ignored and not pushed to the github repository; the 'requirements.txt' file which held all the necessary packages; and lastly the 'readme.md' file that has all of the file descriptions and explanations. 
 
